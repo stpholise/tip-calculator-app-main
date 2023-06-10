@@ -1,0 +1,240 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  :root{
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --Strong-cyan: hsl(172, 67%, 45%);
+  }
+  body{
+    background-color:var(--Light-grayish-cyan);
+    width:100vw;
+    height:100vh;
+    padding:1rem 0;
+    font-family: 'Space Mono', monospace;
+    font-weight:700;
+
+  }
+
+  /* ======= */
+  /* INPUT */
+  /* ======= */
+  input{
+    font-size:24px;
+    font-family: 'Space Mono', monospace;
+    width:100%;
+  }
+  input[type="number"], #custom{
+    background-color:var(--Very-light-grayish-cyan);
+    border:none;
+    outline:none;
+    text-align:right;
+    color:#333;
+  }
+  input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance:none;
+   
+}
+
+/* =========== */
+  /* HEADER */
+  /* ======== */
+ header{
+    text-align:center;
+    margin:1rem auto;
+    
+ }
+/* ============= */
+/* MAIN CONTENT */
+/* ============ */
+  main.main {
+    display:flex;
+    gap:1rem;
+    justify-content:space-between;
+    background-color:#fff;
+    border-radius:1rem;
+    padding:2rem;
+    width:70%;
+    margin: auto;
+    height:auto;
+  }
+
+  /* =============== */
+  /* LEFT HAND SIDE */
+  /* ============== */
+.main .lft{
+    width:60%;
+    padding:0 1rem;
+}
+
+/* BILL AND NOMBER OF PERSONS */
+/* ========================= */
+.bill-cont .relative,
+ .nop-cont .relative{
+    position:relative;
+}
+label, .tip{
+  display:block;
+  padding:0.5rem 0;
+}
+.bill-input, .nop-input {
+    padding:0.2rem 1rem ;
+    border:none;
+    background:var(--Very-light-grayish-cyan);
+}
+.bill-cont .relative .dollar-icon,
+ .nop-cont .relative .persons {
+    position:absolute;
+    left:1rem;
+    top:0.2rem;
+
+}
+
+/* ========== */
+/* SELECT TIP SECTION */
+/* ========= */
+.btns{
+  margin:1rem 0;
+}
+ .btns .btn-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));
+    gap:1rem;
+  }
+  .btn-grid input{
+    border-radius:0.5rem;
+    padding:0.3rem 1rem;
+ 
+    outline:none;
+    border:none;
+    color:#fff;
+  }
+  .btn-grid input.num{
+    
+    background-color:var(--Very-dark-cyan);
+   
+  }
+  .btn-grid input.num:hover,
+   .btn-grid input.num:focus, 
+  .btn-grid .num.atv{
+    background-color:var(--Strong-cyan);
+    color:#444;
+  }
+  .btn-grid .num.atv{
+background-color:var(--Light-grayish-cyan)
+}
+
+#custom::placeholder{
+font-size:20px;
+
+}
+
+
+/* ================= */
+/* RIGHT HAND SIDE */
+/* ================ */
+.main .rt{
+  width:50%;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+  padding:2rem;
+  background-color:var(--Very-dark-cyan);
+  border-radius:1rem;
+}
+.main .rt .top{
+  width:100%;
+}
+.main .rt .flex{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:100%;
+  color:#fff;
+  font-size:0.8rem;
+  margin:1rem 0;
+}
+.ash-text{
+  color:var(--Dark-grayish-cyan);
+ 
+}
+
+.dyn{
+  font-size:2.5rem;
+  text-align:right;
+  color:var(--Strong-cyan)
+}
+
+.reset-btn{
+background-color:var(--Strong-cyan);
+color:var(--Very-dark-cyan);
+text-transform:uppercase;
+border:none;
+outline:none;
+border-radius:0.5rem;
+}
+.reset-btn:hover{
+background-color:var(--Light-grayish-cyan);
+color:var(--Very-dark-cyan);
+
+}
+
+@media(max-width:700px){
+  
+  
+/* ============= */
+/* MAIN CONTENT */
+/* ============ */
+main.main {
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:2rem;
+  width:100%;
+}
+  /* =============== */
+  /* LEFT HAND SIDE */
+  /* ============== */
+  .main .lft{
+    width:100%;
+    padding:0;
+}
+/* ================= */
+/* RIGHT HAND SIDE */
+/* ================ */
+.main .rt{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+  padding:2rem;
+  background-color:var(--Very-dark-cyan);
+  border-radius:1rem;
+}
+.flex{
+  flex-direction:column;
+  align-items:center;
+}
+.dyn{
+  font-size:24px;
+}
+}
+
+
+.ermsg{
+  position:absolute;
+  top:-2.5rem;
+  right:0;
+  color:red;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header class="logo">
+    <img src="images/logo.svg" alt=" logo">
+  </header>
+  <main class="main">
+    <section class="lft">
+      <form action="#" class="form" method="get">
+
+        <span class="bill-cont">
+          <label for="bill-input" class="bill-label">Bill    </label>
+          <span class="relative">
+          <input id="bill-input" type="number" name="bill-input" class="bill-input">
+         <img class="dollar-icon" src="images/icon-dollar.svg" alt="dollar">
+        </span> 
+        </span>
+      <section class="btns">
+        <p class="tip"> Select Tip %</p>
+        <span class="btn-grid"> 
+            <input type="button" class="num num5" value="5%" aria-label="5%">
+            <input type="button" class="num num10"  value="10%" aria-label="5%">
+            <input type="button" class="num num15"  value="15%" aria-label="5%">
+            <input type="button" class="num num25"  value="25%" aria-label="5%">
+            <input type="button" class="num num50"  value="50%" aria-label="5%">
+            <input type="number" id="custom" class="custom" placeholder=" Custom" aria-label="5%">
+         </span>
+       
+      </section>
+        <span class="nop-cont">
+          <label for="nop"> Number of People</label>
+          <span class="relative">
+            <span class="ermsg"></span>
+            <input id="nop" class="nop-input" type="number">
+            <img class="persons" src="images/icon-person.svg" alt="persons">
+          </span>
+      </span>
+      </form>
+    </section>
+    <section class="rt">
+      <div class="top">
+        <div class="amount flex">
+          <span class="lhs">
+            <p class="title"> Tip Amount</p>
+            <o class="ash-text">/ person</o>
+          </span>
+          <p  class="dyn-amount dyn">&dollar;<span id="tip-amount"></span></p>
+        </div>
+        <div class="total flex">
+         <span class="lhs">
+            <p class="title">  Total</p>
+            <o class="ash-text">/ person</o>
+          </span>
+          <p class="dyn-amount dyn">&dollar;<span id="total"></span></hp>
+        </div>
+      </div>
+      
+      <input type="button" class="reset-btn" id="reset-btn"  value="Reset" aria-label="reset">
+    </section>
+  </main>
+
+  
+
+  
+  <div class="attribution">
+    Challenge by <a rel="noopener" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">stephen olise</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
